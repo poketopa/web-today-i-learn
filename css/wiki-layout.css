@@ -35,6 +35,18 @@
   color: var(--primary-color);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* 프로필 히어로 */
 .hero {
   display: flex;
@@ -103,6 +115,32 @@ main {
   margin-bottom: 24px;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid var(--divider-color);
+  border-radius: 999px;
+  color: #355f45;
+  background-color: #f7fbf8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #eaf5ee;
+  border-color: #c9dfd2;
+  transform: translateY(-1px);
+}
+
 /* 갤러리 그리드 */
 .gallery-grid {
   display: grid;
@@ -115,6 +153,14 @@ main {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 4px;
+  transition: transform 0.22s ease, filter 0.22s ease;
+  transform: scale(1);
+  cursor: default;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.015);
+  filter: brightness(1.02);
 }
 
 /* 인생 작품 카드 */
@@ -130,6 +176,41 @@ main {
   padding: 20px;
   border-radius: 8px;
   background-color: var(--card-bg-color);
+}
+
+.work-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.work-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--card-bg-color);
+}
+
+.work-item-image {
+  width: 140px;
+  height: 180px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.work-item-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.work-item-content p {
+  color: #666;
+  line-height: 1.6;
 }
 
 .work-thumbnail {
@@ -358,6 +439,17 @@ footer {
   aspect-ratio: 16 / 9;
   border: none;
   border-radius: 4px;
+  margin-top: 14px;
+}
+
+.work-item iframe,
+.work-item video {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 4px;
+  margin-top: 14px;
 }
 
 /* 변수 */
@@ -368,4 +460,52 @@ footer {
   --card-bg-color: #fafafa;
   --divider-color: #e8e8e8;
   --font-default-color: #333;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    height: auto;
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .work-card {
+    flex-direction: column;
+  }
+
+  .work-item {
+    flex-direction: column;
+  }
+
+  .work-thumbnail {
+    width: 100%;
+    height: 180px;
+  }
+
+  .work-item-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

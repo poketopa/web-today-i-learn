@@ -1,114 +1,143 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
+    <meta property="og:title" content="오늘 배운 웹 개발 TIL 페이지" />
+    <meta property="og:description" content="HTML, CSS, JavaScript 학습을 위한 자기소개 페이지입니다." />
+    <meta property="og:image" content="./images/img1.jpeg" />
 
-    <title>Today I Learn</title>
+    <title>Web Today I Learn</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
-      <ul class="nav-links">
-        <li><a href="#about">자기소개</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="top-nav">
+        <span class="nav-logo">My Page</span>
+        <ul class="nav-links">
+          <li><a href="#profile">프로필</a></li>
+          <li><a href="#info">기본 정보</a></li>
+          <li><a href="#about">자기소개</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#works">인생 작품</a></li>
+          <li><a href="#til">TIL</a></li>
+        </ul>
+      </nav>
 
-    <!-- 프로필 히어로 -->
-    <section class="hero" id="about">
-      <div class="profile-card">
-        <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+      <section class="hero" id="profile">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="./images/profile.png" alt="프로필 사진" />
+          </div>
+          <div class="profile-info">
+            <h1>루덴스 Ludens</h1>
+            <p class="tagline">호모 루덴스 (Homo Ludens, 놀이하는 인간)
+              <br> 인간의 본질을 유희에서 찾는 인간관</p>
+          </div>
         </div>
-        <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </header>
 
     <main>
-      <!-- 자기소개 -->
-      <section class="content-section">
-        <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
+      <section class="content-section" id="about">
+        <h2>Introduce</h2>
+        <p>
+          안녕하세요. 이 글을 읽고 있는 당신이 죠은 하루를 보내길 바랍니다.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/poketopa" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://velog.io/@lhs5427ll/posts" target="_blank" rel="noopener noreferrer">Velog</a>
+          <a href="https://blog.naver.com/lhs5427ll" target="_blank" rel="noopener noreferrer">독후감 블로그</a>
+        </div>
       </section>
 
-      <!-- 기본 정보 -->
       <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <!-- TODO: 자신의 기본 정보를 표(<table>)로 정리하세요 -->
+        <h2>Info</h2>
         <table class="info-table">
           <tr>
             <th>이름</th>
-            <td></td>
+            <td>현성</td>
+          </tr>
+          <tr>
+            <th>닉네임</th>
+            <td>루덴스</td>
+          </tr>
+            <tr>
+            <th>취미</th>
+            <td>게임, 독서, 피아노도치는데피아노가없어서못하는중</td>
           </tr>
           <tr>
             <th>MBTI</th>
-            <td></td>
+            <td>ENTP</td>
           </tr>
-          <tr>
-            <th>취미</th>
-            <td></td>
-          </tr>
+
           <tr>
             <th>좋아하는 음식</th>
-            <td></td>
+            <td>남자 음식 다 좋아합니다. (리버스 테리)</td>
           </tr>
         </table>
       </section>
 
-      <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
-        <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
+        <h2>Gallery</h2>
+        <p class="section-desc">곰을 좋아해서 갤러리에 곰 사진이 많네요
+          <br> 보고가세요
+        </p>
         <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+          <img src="./images/img1.jpeg" alt="갤러리 이미지 1" />
+          <img src="./images/img2.jpeg" alt="갤러리 이미지 2" />
+          <img src="./images/img3.png" alt="갤러리 이미지 3" />
+          <img src="./images/img4.png" alt="갤러리 이미지 4" />
+          <img src="./images/img5.jpeg" alt="갤러리 이미지 5" />
+          <img src="./images/img6.png" alt="갤러리 이미지 6" />
+          <img src="./images/img7.jpeg" alt="갤러리 이미지 7" />
+          <img src="./images/img8.jpeg" alt="갤러리 이미지 8" />
+          <img src="./images/img9.jpeg" alt="갤러리 이미지 9" />
         </div>
       </section>
 
-      <!-- 나를 울린 인생 작품 -->
       <section class="content-section" id="works">
-        <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
-            <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
+        <h2>Masterpiece</h2>
+        <ul class="work-bullets">
+          <li class="work-item">
+            <img class="work-item-image" src="./images/masterpiece1.png" alt="인생 작품 1 이미지" />
+            <div class="work-item-content">
+              <h3>進撃の巨人</h3>
+              <p>진짜 안 본 사람이랑 친구 못합니다.
+                <br><br>빨리 보고 오세요.
+              </p>
             </div>
-            <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
+          </li>
+          <li class="work-item">
+            <img class="work-item-image" src="./images/masterpiece2.png" alt="인생 작품 2 이미지" />
+            <div class="work-item-content">
+              <h3>이방인</h3>
+              <p>오늘 엄마가 죽었다. 아니 어쩌면 어제, 잘 모르겠다.<br><br>삶이 의미 없다고 느낄 때 깨달음을 주는 책</p>
             </div>
-          </article>
-        </div>
+          </li>
+          <li class="work-item">
+            <img class="work-item-image" src="./images/masterpiece3.png" alt="인생 작품 3 이미지" />
+            <div class="work-item-content">
+              <h3>키미노나마에와</h3>
+              <p>와... 진짜 ....... .....
+                <br>마지막 그 지하철.. 와.......
+                <br>막 뛰어서 타키 계단 밑에 있고 미츠하 계단 위에 있고
+                <br>키미노... 와......
+                <br>근데 제목이 나마에와? 가 아니라 나마에와.인게
+                <br>마지막 계단 씬에서 서로 이름을 기억했다는 해석이 잇는거임!!!!!!!!!!
+                <br>하 미쳤다 안 본 뇌 사고싶다 그냥
+              </p>
+            </div>
+          </li>
+        </ul>
       </section>
 
-      <!-- TIL (Today I Learned) -->
       <section class="content-section" id="til">
         <h2>TIL</h2>
         <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
 
-        <!-- TIL 작성 폼 -->
         <form class="til-form" id="til-form">
           <div class="form-group">
             <label for="til-date">날짜</label>
@@ -128,21 +157,18 @@
           </div>
         </form>
 
-        <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
         <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
           <article class="til-item">
-            <time>2026-03-15</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            <time>2026-03-18</time>
+            <h3>HTML/CSS/JavaScript 역할 이해</h3>
+            <p>HTML은 구조, CSS는 스타일, JavaScript는 동작을 담당한다는 기본 개념을 학습했다.</p>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer>
-      <p>&copy; My Page</p>
+      <p>&copy; 2026 My Page. 오늘의 배움을 내일의 기능으로 만듭니다.</p>
     </footer>
   </body>
 </html>
